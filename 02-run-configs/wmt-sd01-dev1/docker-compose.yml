@@ -1,6 +1,10 @@
 services:
   msr:
-    image: ${CONTAINER_IMAGE}:${CONTAINER_IMAGE_TAG}
+    image: my-quick-msr-dev-image
+    build:
+      context: ./build
+      args:
+        - __ibm_wm_msr_image=${CONTAINER_IMAGE}:${CONTAINER_IMAGE_TAG}
     ports:
       - ${HOST_PORT_PREFIX}55:5555
     volumes:
