@@ -8,6 +8,7 @@ services:
     ports:
       - ${HOST_PORT_PREFIX}55:5555
       - ${HOST_PORT_PREFIX}61:55101
+      - ${HOST_PORT_PREFIX}62:55102
     volumes:
       # uncomment for versions previous to 11
       # - ${HOST_MSR_LICENSE_FILE}:${GUEST_LICENSE_FILE_MOUNT_POINT}

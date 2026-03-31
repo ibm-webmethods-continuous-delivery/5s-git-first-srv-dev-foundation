@@ -2,6 +2,34 @@
 
 <Values version="2.0">
   <record name="listeners" javaclass="com.wm.util.Values">
+    <record name="HTTPSListener@55102" javaclass="com.wm.util.Values">
+      <number name="port" type="Integer">55102</number>
+      <value name="protocol">HTTPS</value>
+      <value name="pkg">PortsPackage</value>
+      <value name="enabled">true</value>
+      <value name="key">HTTPSListener@55102</value>
+      <value name="uniqueID">1cc64b31910b46c39c075d98f69df1e0</value>
+      <value name="portAlias">alias_55102</value>
+      <value name="portDescription">description_55102</value>
+      <value name="factoryKey">webMethods/HTTP</value>
+      <value name="configURL">/WmRoot/configHTTP.dsp</value>
+      <value name="provider">webMethods</value>
+      <value name="listenerType">Regular</value>
+      <value name="clientAuth">none</value>
+      <value name="idProvider">salesforce.com</value>
+      <value name="ssl">true</value>
+      <value name="maxQueue">200</value>
+      <value name="keepAliveTimeout">20000</value>
+      <value name="internalPort">-1</value>
+      <value name="curDelay">0</value>
+      <value name="stepsize">10000</value>
+      <value name="suspended">false</value>
+      <value name="alias">ssos</value>
+      <value name="keyStore">DEFAULT_IS_KEYSTORE</value>
+      <value name="trustStore">DEFAULT_JVM_TRUSTSTORE</value>
+      <null name="jsseDisabledProtocols"/>
+      <null name="jsseEnabledProtocols"/>
+    </record>
     <record name="HTTPListener@55101" javaclass="com.wm.util.Values">
       <number name="port" type="Integer">55101</number>
       <value name="protocol">HTTP</value>
@@ -29,6 +57,28 @@
     </record>
   </record>
   <record name="access" javaclass="com.wm.util.Values">
+    <record name="HTTPSListener@55102" javaclass="com.wm.util.Values">
+      <null name="home"/>
+      <value name="default">exclude</value>
+      <record name="nodes" javaclass="com.wm.util.StringSet">
+        <list name="elements">
+          <value>wm.server.csrfguard:replaceSpecialCharacters</value>
+          <value>wm.server:disconnect</value>
+          <value>wm.server:ping</value>
+          <value>wm.server.tx:end</value>
+          <value>wm.server:getClusterNodes</value>
+          <value>wm.server:getServerNodes</value>
+          <value>wm.server.csrfguard:isCSRFGuardEnabled</value>
+          <value>wm.server:noop</value>
+          <value>wm.server.csrfguard:getCSRFSecretToken</value>
+          <value>wm.server.tx:execute</value>
+          <value>wm.server.tx:start</value>
+          <value>wm.server:connect</value>
+          <value>wm.server.tx:restart</value>
+        </list>
+      </record>
+      <value name="key">HTTPSListener@55102</value>
+    </record>
     <record name="HTTPListener@55101" javaclass="com.wm.util.Values">
       <null name="home"/>
       <value name="default">exclude</value>
